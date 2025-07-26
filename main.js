@@ -50,3 +50,9 @@ async function getWeatherData(city) {
 searchButton.addEventListener("click", () => {
   getWeatherData(searchBox.value);
 });
+
+searchBox.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    getWeatherData(searchBox.value);
+  }
+});
